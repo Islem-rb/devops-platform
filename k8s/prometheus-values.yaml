@@ -1,0 +1,25 @@
+grafana:
+  enabled: true
+  adminPassword: "devops123"
+  service:
+    type: NodePort
+    nodePort: 32000
+
+prometheus:
+  service:
+    type: NodePort
+    nodePort: 32001
+  prometheusSpec:
+    additionalScrapeConfigs:
+      - job_name: 'user-service'
+        metrics_path: '/actuator/prometheus'
+        static_configs:
+          - targets: ['user-service.devops-platform.svc.cluster.local:8081']
+      - job_name: 'product-service'
+        metrics_path: '/actuator/prometheus'
+        static_configs:
+          - targets: ['product-service.devops-platform.svc.cluster.local:8082']
+      - job_name: 'order-service'
+        metrics_path: '/actuator/prometheus'
+        static_configs:
+          - targets: ['order-service.devops-platform.svc.cluster.local:8083']
