@@ -1,0 +1,12 @@
+**/target/
+**/.mvn/
+**/mvnw
+**/mvnw.cmd
+**/.gradle/
+**/gradle/
+**/gradlew
+**/gradlew.bat
+*.class
+*.jar
+*.war
+.DS_Store
