@@ -22,7 +22,7 @@ pipeline {
                     for (service in services) {
                         echo "Building and testing ${service}..."
                         dir(service) {
-                            sh './mvnw clean package'
+                            sh 'mvn clean package'
                         }
                     }
                 }
