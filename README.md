@@ -1,4 +1,3 @@
-cat > ~/Desktop/project/devops-platform/README.md << 'EOF'
 # DevOps Observability Platform
 
 A complete observability platform with three Spring Boot microservices, Prometheus/Grafana/Loki stack, and a Jenkins CI/CD pipeline on kind Kubernetes.
@@ -196,4 +195,3 @@ Islem Rebhi – GitHub
 License
 
 Educational purposes only.
-EOF
